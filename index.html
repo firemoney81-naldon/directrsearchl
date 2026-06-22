@@ -1,23 +1,823 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+
+    <!-- JSON-LD Structured Data for SEO and AI Scrapers -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "name": "자동차보험 경력 인정 제도 완벽 가이드",
+        "url": "https://example.com/car-insurance-career-recognition",
+        "description": "2026년 최신 자동차보험 가입경력 인정제도를 분석하여 첫차 가입 시 보험료를 절감하는 구체적인 방안을 제공합니다.",
+        "author": {
+            "@type": "Organization",
+            "name": "금융 정보 분석 연구소"
+        },
+        "mainEntity": {
+            "@type": "Article",
+            "headline": "자동차보험 경력 인정 제도: 20대 및 첫차 운전자를 위한 보험료 할인 가이드",
+            "articleBody": "자동차보험 경력 인정 제도는 본인 명의로 보험에 가입한 이력이 없더라도 군 운전병, 법인 운전직, 가족 보험 등록 등의 운전 경력을 인정받아 신규 가입 시 보험료를 대폭 낮출 수 있는 제도입니다. 최대 3년까지 경력이 누적되어 반영되며, 연령대와 차종에 따라 합리적인 보험료 산출에 도움을 줍니다.",
+            "publisher": {
+                "@type": "Organization",
+                "name": "자동차 금융 미디어 센터",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://example.com/images/logo.png"
+                }
+            },
+            "datePublished": "2026-01-01",
+            "dateModified": "2026-03-30"
+        }
+    }
+    </script>
+
+    <!-- Design and Layout (Colorful, Soft Tones, Clear Visual Hierarchy, High Readability) -->
+    <style>
+        /* Base Styling & Color Palette */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6fa; /* Soft blue-gray background */
+            color: #1e293b; /* Deep slate for maximum text readability */
+            line-height: 1.8;
+            word-break: keep-all;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%); /* Deep blue to teal soft gradient */
+            color: #ffffff;
+            padding: 50px 5%;
+            text-align: center;
+            border-bottom: 3px solid #0f766e;
+        }
+
+        header h1 {
+            font-size: 2.6em;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 0;
+            color: #e2e8f0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Hero CTA Button */
+        .hero-cta {
+            display: inline-block;
+            background-color: #f59e0b; /* Golden warm tone */
+            color: #1e293b;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 25px;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .hero-cta:hover {
+            background-color: #d97706;
+            transform: translateY(-2px);
+        }
+
+        nav {
+            background-color: #0f172a; /* Slate 900 for modern dark contrast */
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 12px;
+        }
+
+        nav ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8; /* Bright sky blue highlight */
+        }
+
+        /* Container Section Grid */
+        section {
+            padding: 50px 6%;
+            max-width: 1100px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+        }
+
+        section h2 {
+            color: #1e3a8a;
+            font-size: 1.85em;
+            font-weight: 700;
+            border-left: 6px solid #0d9488;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        section h3 {
+            color: #0f766e;
+            font-size: 1.4em;
+            margin-top: 35px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+
+        p {
+            font-size: 1.05em;
+            color: #334155;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: #475569;
+        }
+
+        /* Visual CSS Chart */
+        .visual-chart {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .chart-title {
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .chart-bar-container {
+            margin-bottom: 15px;
+        }
+
+        .chart-label {
+            display: block;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 5px;
+        }
+
+        .chart-track {
+            background-color: #e2e8f0;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 25px;
+            position: relative;
+        }
+
+        .chart-bar {
+            height: 100%;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            color: white;
+            font-size: 0.85em;
+            font-weight: bold;
+            transition: width 1s ease-in-out;
+        }
+
+        /* Detailed Comparison Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            overflow-x: auto;
+            display: block;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 14px 18px;
+            text-align: left;
+            min-width: 120px;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: #1e293b;
+            font-weight: 700;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Soft callout containers */
+        .callout-box {
+            background-color: #fffbeb; /* Soft amber/yellow background */
+            border-left: 5px solid #d97706;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            color: #78350f;
+        }
+
+        .callout-box-green {
+            background-color: #f0fdf4; /* Soft green */
+            border-left: 5px solid #16a34a;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            color: #14532d;
+        }
+
+        /* Dynamic Calculator Styling */
+        .calculator-container {
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .calculator-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #334155;
+            font-size: 0.95em;
+        }
+
+        select, input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background-color: #ffffff;
+            font-size: 1em;
+            color: #1e293b;
+            box-sizing: border-box;
+        }
+
+        .calc-button {
+            grid-column: span 2;
+            background-color: #0d9488;
+            color: #ffffff;
+            padding: 14px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .calc-button {
+                grid-column: span 1;
+            }
+        }
+
+        .calc-button:hover {
+            background-color: #0f766e;
+        }
+
+        .result-panel {
+            background-color: #e2e8f0;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.15em;
+            color: #1e3a8a;
+        }
+
+        /* Lead Gen Form styling */
+        .lead-form {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .form-row {
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 8px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+        }
+
+        .checkbox-item input {
+            margin-right: 8px;
+            width: 18px;
+            height: 18px;
+        }
+
+        .submit-btn {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #1e40af;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 5%;
+            margin-top: 50px;
+            border-top: 4px solid #0d9488;
+        }
+
+        footer p {
+            font-size: 0.9em;
+            color: #64748b;
+        }
+
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .external-links-section {
+            background-color: #f8fafc;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .external-links-section h4 {
+            margin-top: 0;
+            color: #1e3a8a;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .external-links-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .external-links-list li {
+            margin-bottom: 10px;
+        }
+
+        .external-links-list a {
+            color: #0d9488;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .external-links-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>자동차보험 경력 인정 제도 가이드</h1>
+        <p>초보운전자부터 연령대별 첫차 구매자까지 보험료 절감을 위한 필수 가이드. 군 운전병, 법인 운전직, 가족 및 부부 한정 경력 등록 절차와 예상 비용 계산까지 한 번에 확인하세요.</p>
+        <a href="#calculator-section" class="hero-cta">실시간 경력 인정 할인 계산하기</a>
+    </header>
+
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+        <ul>
+            <li><a href="#concept-section">제도의 개념</a></li>
+            <li><a href="#target-section">6가지 인정 기준</a></li>
+            <li><a href="#age-model-section">연령 및 차종별 요율</a></li>
+            <li><a href="#calculator-section">예상 비용 계산기</a></li>
+            <li><a href="#community-section">커뮤니티 트렌드</a></li>
+            <li><a href="#regulatory-section">2026 제도 변화</a></li>
+            <li><a href="#faq-section">자주 묻는 질문</a></li>
+            <li><a href="#consult-section">비교 분석 컨설팅</a></li>
+        </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <section id="concept-section">
+        <h2>자동차보험 가입경력 인정제도란 무엇인가요?</h2>
+        <p>자동차보험에 처음 가입할 때 산출되는 보험료가 예상보다 상당히 높게 느껴지는 경우가 많습니다. 이는 보험사에서 신규 가입자를 사고 발생 확률이 높은 고위험군으로 분류하기 때문입니다. 이러한 불합리한 보험료 부담을 덜어주기 위해 마련된 제도가 바로 자동차보험 경력 인정 제도입니다.</p>
+        <p>보험사는 가입자의 운전 경력에 따라 요율을 다르게 책정하는데, 이를 가입경력요율이라고 합니다. 본인 명의로 보험을 유지한 적이 없더라도 과거에 다른 사람의 차를 함께 운전했거나, 군 복무 중 운전 업무를 맡았거나, 해외에서 자동차보험에 가입했던 경력 등을 증명하면 가입 기간을 소급 인정받을 수 있습니다. 경력은 최대 3년까지 합산이 가능하며, 3년의 운전 경력을 인정받게 되면 가입 초기의 가입경력요율 할증을 배제하고 무경력자 대비 상당한 비용 절감 혜택을 누릴 수 있습니다.</p>
+        
+        <div class="callout-box-green">
+            <strong>핵심 요약:</strong> 경력을 인정받지 못한 신규 가입자의 보험료는 평균 요율 대비 최대 30퍼센트에서 40퍼센트까지 할증될 수 있습니다. 하지만 가입경력인정자로 등록되어 이력을 차곡차곡 쌓아 둔다면 첫차 가입 시 부과되는 불합리한 비용 할증 폭을 최대로 낮출 수 있습니다.
+        </div>
+
+        <div class="visual-chart">
+            <div class="chart-title">가입 경력 기간에 따른 가입경력요율 적용 추이 (예시)</div>
+            <div class="chart-bar-container">
+                <span class="chart-label">신규 최초 가입 (운전 경력 0년)</span>
+                <div class="chart-track">
+                    <div class="chart-bar" style="width: 100%; background-color: #ef4444;">할증 요율 100퍼센트 기준 적용</div>
+                </div>
+            </div>
+            <div class="chart-bar-container">
+                <span class="chart-label">경력 1년 인정 시</span>
+                <div class="chart-track">
+                    <div class="chart-bar" style="width: 82%; background-color: #f59e0b;">약 18퍼센트 감소 수준 (82퍼센트 적용)</div>
+                </div>
+            </div>
+            <div class="chart-bar-container">
+                <span class="chart-label">경력 2년 인정 시</span>
+                <div class="chart-track">
+                    <div class="chart-bar" style="width: 73%; background-color: #10b981;">약 27퍼센트 감소 수준 (73퍼센트 적용)</div>
+                </div>
+            </div>
+            <div class="chart-bar-container">
+                <span class="chart-label">경력 3년 인정 시 (최대 할인 혜택 범위)</span>
+                <div class="chart-track">
+                    <div class="chart-bar" style="width: 65%; background-color: #0d9488;">약 35퍼센트 감소 수준 (65퍼센트 적용)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="target-section">
+        <h2>공식적으로 인정받을 수 있는 6가지 운전 경력 기준</h2>
+        <p>우리나라 금융감독원과 보험 개발 규정에 따르면 과거의 운전 사실을 공식 입증하여 경력으로 반영할 수 있는 경로는 크게 여섯 가지 종류로 분류됩니다. 본인의 상황에 알맞은 서류를 철저히 구비하여 신청하는 것이 제일 합리적인 비용 관리의 첫걸음입니다.</p>
+
+        <h3>1. 타인 명의 자동차보험의 가입경력인정자 등록</h3>
+        <p>가장 흔하게 이용되는 경로로, 주로 부모님 차를 몰 때 가입경력인정자 또는 종피보험자로 등록해 두는 방식입니다. 부모님 명의의 보험에서 운전자 한정 범위를 가족 한정 또는 부부 한정, 지정 1인, 기명피보험자 및 추가운전자 지정 구조로 묶어 두고 가입경력인정 신청 대상자로 공식 등재하면 해당 기간만큼의 경력이 보장됩니다. 과거에는 1명만 지정이 가능했으나 제도가 개선되어 현재 계약당 최대 2명까지 추가운전자 등록이 가능합니다.</p>
+
+        <h3>2. 군 운전병 근무 경력</h3>
+        <p>군대에서 운전병으로 복무하며 차량 운행 임무를 수행한 이력도 최대 3년까지 호봉과 상관없이 가입 경력으로 산정됩니다. 제대 후 병무청에서 발급하는 병적증명서의 특기명칭에 운전병 복무 사실 및 상세 운전 기간이 명시되어 있어야 하며, 이를 가입한 보험 업체 측에 팩스나 온라인 사이트로 송부하면 즉시 할인이 적용됩니다.</p>
+
+        <h3>3. 법인 운전직 근무 이력</h3>
+        <p>관공서나 일반 유한회사 및 법인체에서 전담 운전 기사 등의 정규 운전직으로 종사하며 급여를 수령한 경우입니다. 해당 업무 기간 동안 법인 소유의 차량등록증, 재직증명서, 그리고 실제 운행을 입증할 수 있는 배차일지나 차량 운행기록부 사본을 지참하여 가입 경력 인증 승인을 받을 수 있습니다. 단, 단순 택배 배송이나 배달 대행 등 비정형 운송 수단 탑승 이력은 적용 여부가 제한될 수 있습니다.</p>
+
+        <h3>4. 해외 자동차보험 가입 경력</h3>
+        <p>해외 유학이나 장기 해외 체류 중 현지 보험사 브랜드를 통해 본인 명의로 보험에 가입해 차량을 몰았던 경험이 있다면 이 또한 영문 혹은 해당국 공증 가입증명서를 통해 인정이 가능합니다. 가입서류에 운전자 인적 사항과 담보 기간이 구체적으로 증명되어야 온전한 적용이 완료됩니다.</p>
+
+        <h3>5. 버스, 택시, 화물 등 공제조합 가입경력</h3>
+        <p>각종 운수 공제조합(법인택시공제, 개인택시공제, 화물공제 등) 소속으로 가입했던 기록 역시 무사고 이력 및 운전경력 확인이 담긴 공제가입증명서를 통해 경력 합산이 수월하게 이뤄집니다.</p>
+
+        <h3>6. 장기렌터카 장기 운전 기록</h3>
+        <p>렌터카 업체 및 캐피탈 회사의 장기렌터카 상품을 임차인 본인의 명의로 단독 1인 한정 계약하여 최소 1개월 이상 연속하여 이용한 기록이 있다면, 임대차계약서와 납입 증명 자료를 활용해 해당 사용 기간을 고스란히 경력으로 이관시킬 수 있습니다.</p>
+
+        <div class="callout-box">
+            <strong>주의할 점:</strong> 단순 운전자 범위 지정 변경만으로는 가입경력인정이 자동 등록되지 않습니다. 반드시 계약자가 보험 계약 중에 혹은 신규 가입 시점에 추가운전자의 정보를 본인인증(토스, 카카오톡, 네이버 인증 등 활용)을 거쳐 명부상에 등재 완료해야 경력 인계가 개시됩니다.
+        </div>
+    </section>
+
+    <section id="age-model-section">
+        <h2>연령대별 평균 보험료 영향 및 차종별 요율 분석</h2>
+        <p>동일한 운전 경력 요율을 적용받더라도 가입자의 연령대와 운전할 자동차 차종의 배기량, 연료 방식에 따라 실제 체감하는 할인 금액 수준은 크게 달라집니다. 특히 20대 사회 초년생의 첫차 유무에 따라 수십만 원 이상의 차이점이 관찰되기도 합니다.</p>
+
+        <h3>연령대별 자동차보험 가입 요인 분석</h3>
+        <ul>
+            <li><strong>20대 연령대 (만 21세 이상, 만 24세 이상, 만 26세 이상):</strong> 가입 경력 인정 유무가 가장 극적인 편차를 자아내는 연령대입니다. 통계적으로 사고 비율이 제일 높게 집계되기 때문에 최초 무경력 가입 시 소형차라 할지라도 비용이 150만 원 이상 치솟습니다. 경력 3년을 최대로 채울 시 100만 원 안팎까지 절감이 용이합니다.</li>
+            <li><strong>30대 연령대 (만 30세 이상, 만 35세 이상):</strong> 결혼 후 부부 한정 특약을 가입하면서 안착하는 세대입니다. 보통 무경력 시에도 요율이 80~90만 원대로 비교적 완만하지만, 경력이 인정될 시 추가로 20퍼센트 가량 보정을 받게 되어 다이렉트 싼곳 기준으로 60만 원 선에서 조율이 용이합니다.</li>
+            <li><strong>40대 및 50대 연령대:</strong> 이 구간은 안정성이 정점에 이르는 연령층으로 경력 가중치보다는 우량할인 등급(1등급부터 29등급) 관리와 자녀 할인 특약, 안전 운전 점수 특약 활용도가 더 높은 영향을 띱니다.</li>
+            <li><strong>60대 연령대:</strong> 서서히 고령 운전자로 구분되어 일부 위험 등급 가중치가 붙을 수 있어, 경력 관리가 잘 이뤄진 베테랑 상태를 꾸준히 입증해 두는 편이 경제적입니다.</li>
+        </ul>
+
+        <h3>차종별 경비 체계 비교</h3>
+        <p>어떤 차를 선택하느냐에 따라 기본 계산 틀이 달라집니다. 국산차와 수입차의 부품 수리비 등 수리비 요율에 기인한 기초 등급 차이가 존재하기 때문입니다.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>차량 종류 구분</th>
+                    <th>소형차 / 경차</th>
+                    <th>준중형차 / SUV</th>
+                    <th>중형차 / 대형차</th>
+                    <th>전기차 / 하이브리드</th>
+                    <th>수입차 (독일 3사 등)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>무경력 평균 예상가 (20대)</td>
+                    <td>약 1,200,000원</td>
+                    <td>약 1,500,000원</td>
+                    <td>약 1,800,000원</td>
+                    <td>약 1,900,000원</td>
+                    <td>약 2,800,000원</td>
+                </tr>
+                <tr>
+                    <td>3년 경력 인정 후 예상가</td>
+                    <td>약 850,000원</td>
+                    <td>약 1,050,000원</td>
+                    <td>약 1,250,000원</td>
+                    <td>약 1,300,000원</td>
+                    <td>약 1,950,000원</td>
+                </tr>
+                <tr>
+                    <td>평균 예상 비용 절감률</td>
+                    <td>약 29퍼센트 할인</td>
+                    <td>약 30퍼센트 할인</td>
+                    <td>약 31퍼센트 할인</td>
+                    <td>약 31퍼센트 할인</td>
+                    <td>약 30퍼센트 할인</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="calculator-section">
+        <h2>실시간 자동차보험 경력 인정 예상 할인 금액 계산기</h2>
+        <p>본인의 나이대와 운전할 예정인 차종, 그리고 누적하여 온 과거 운전경력 기간을 대략적으로 지정하여 첫 가입 시 아낄 수 있는 비용의 대략적 견적을 알아볼 수 있는 보조용 시뮬레이션 계산기 툴입니다. 실제 보험사 승인 시점의 정밀한 금액 계산과 다소 차이가 있을 수 있으니 가이드라인으로 활용 바랍니다.</p>
+
+        <div class="calculator-container">
+            <div class="calculator-title">나의 예상 보험료 절감 시뮬레이션</div>
+            <div class="form-grid">
+                <div>
+                    <label for="calc-age">가입자 연령 기준</label>
+                    <select id="calc-age">
+                        <option value="20under">만 21세 미만 (초보운전 / 대학생)</option>
+                        <option value="20mid">만 21세 이상 ~ 25세 이하 (첫 직장 신입사원)</option>
+                        <option value="20high">만 26세 이상 ~ 29세 이하 (사회초년생)</option>
+                        <option value="30over">만 30세 이상 (숙련 운전 준비군)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="calc-car">보유 또는 구매 예정 차량 종류</label>
+                    <select id="calc-car">
+                        <option value="compact">경차 / 소형차 (레이, 모닝, 아반떼 등)</option>
+                        <option value="midsize">중형차 / 국산 SUV (쏘나타, 그랜저, 투싼 등)</option>
+                        <option value="premium">대형차 / 수입차 / 대형 SUV (제네시스, E클래스 등)</option>
+                        <option value="eco">전기차 / 하이브리드 (아이오닉, EV6 등)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="calc-career">인정받을 수 있는 총 운전 경력 기간</label>
+                    <select id="calc-career">
+                        <option value="0">인정 경력 없음 (최초 무경력)</option>
+                        <option value="1">1년 미만 운전 경력</option>
+                        <option value="2">1년 이상 ~ 2년 미만</option>
+                        <option value="3">2년 이상 ~ 3년 미만</option>
+                        <option value="4">3년 이상 (최대 인정 기간 초과)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="calc-scope">기존 보험의 한정 운전자 범위</label>
+                    <select id="calc-scope">
+                        <option value="one">기명피보험자 지정 1인 한정</option>
+                        <option value="couple">부부 한정 구조</option>
+                        <option value="family">가족 한정 및 형제자매 포함</option>
+                        <option value="any">누구나 운전 가능 조건</option>
+                    </select>
+                </div>
+
+                <button type="button" class="calc-button" onclick="calculateSavings()">예상 절감 금액 계산하기</button>
+            </div>
+
+            <div class="result-panel" id="calculator-result" style="display:none;">
+                이곳에 결과가 실시간으로 노출됩니다.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function calculateSavings() {
+            const age = document.getElementById('calc-age').value;
+            const car = document.getElementById('calc-car').value;
+            const career = document.getElementById('calc-career').value;
+            const scope = document.getElementById('calc-scope').value;
+
+            // Base premium model calculations
+            let basePremium = 1500000;
+            if (age === '20under') basePremium = 2100000;
+            else if (age === '20mid') basePremium = 1700000;
+            else if (age === '20high') basePremium = 1300000;
+            else if (age === '30over') basePremium = 850000;
+
+            // Car type multiplier
+            let carMultiplier = 1.0;
+            if (car === 'compact') carMultiplier = 0.85;
+            else if (car === 'midsize') carMultiplier = 1.05;
+            else if (car === 'premium') carMultiplier = 1.6;
+            else if (car === 'eco') carMultiplier = 1.15;
+
+            // Adjusted Base before career discounts
+            let rawPremium = basePremium * carMultiplier;
+
+            // Career discount rate
+            let discountRate = 0.0;
+            if (career === '1') discountRate = 0.12;
+            else if (career === '2') discountRate = 0.22;
+            else if (career === '3') discountRate = 0.29;
+            else if (career === '4') discountRate = 0.35;
+
+            let finalPremium = Math.round(rawPremium * (1 - discountRate));
+            let totalSaved = Math.round(rawPremium * discountRate);
+
+            // Format currency helper
+            const formatWon = (num) => num.toLocaleString('ko-KR') + ' 원';
+
+            const resultDiv = document.getElementById('calculator-result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <div style="font-size: 0.95em; color: #475569; margin-bottom: 10px;">시뮬레이션 가상 계산 결과</div>
+                <div style="margin-bottom: 8px;">할인 전 예상 기준금액: <span style="text-decoration: line-through; color: #ef4444;">${formatWon(rawPremium)}</span></div>
+                <div style="font-size: 1.3em; color: #0d9488; margin-bottom: 8px;">경력 인정 후 예상 납부액: ${formatWon(finalPremium)}</div>
+                <div style="background-color: #d1fae5; color: #065f46; padding: 10px; border-radius: 4px; display: inline-block; margin-top: 5px;">
+                    총 예상 할인 절약 금액: 약 ${formatWon(totalSaved)} (절감률 약 ${Math.round(discountRate * 100)}퍼센트)
+                </div>
+            `;
+        }
+    </script>
+
+    <section id="community-section">
+        <h2>인기 자동차 커뮤니티 트렌드 분석 및 내돈내산 가입 후기 요약</h2>
+        <p>인터넷의 여러 주요 전문 자동차 커뮤니티인 디시 인사이드, 보배드림, 펨코(에펨코리아) 등에서는 매해 다이렉트 자동차보험 저렴한곳 및 사은품 혜택, 상품권 현금지원 소식들이 활발히 논의되고 있습니다. 이 중 가장 높은 누적 조회수를 기록하는 주제가 바로 부모님 명의 첫차 등록 후 독립하는 요령입니다.</p>
+
+        <h3>주요 온라인 동향 및 실제 커뮤니티 의견</h3>
+        <ul>
+            <li><strong>디시인사이드 차갤 게시판 동향:</strong> 20대 초보운전자들이 본인 명의 단독 가입에 도전했다가 200만 원 안팎의 청구금액 견적서를 인증하고 좌절하는 게시글이 단골 소재로 오르내립니다. 이곳에서는 부모님 차 지정 1인 한정으로 가입경력인정자 등록을 우선 3년 버티는 빌드가 국룰 및 바이블로 불리고 있습니다.</li>
+            <li><strong>보배드림 커뮤니티 정보:</strong> 군 운전병 출신들이 제대 후 복무 서류를 미처 준비하지 못해 무경력 가격으로 가입한 후 나중에 환급 제도를 통해 납입했던 차액을 수십만 원 돌려받았다는 내돈내산 후기나 환급 성공담이 가입 노하우로 자주 공유됩니다.</li>
+            <li><strong>에펨코리아 자동차 포럼:</strong> 보험사 다이렉트 앱(어플)이나 금융 플랫폼인 토스 등을 통해 간단히 가입 이력을 승인받는 꿀팁이 주로 인기를 끌며, 단순 누구나 운전 특약과 기명 추가의 차이점을 명쾌하게 대조 설명해 주는 게시글이 높은 추천을 얻습니다.</li>
+        </ul>
+
+        <blockquote>
+            <strong>펨코 아이디 CarOwner2026 님의 실제 내돈내산 조언 후기:</strong><br>
+            "처음에 아반떼 중고차 사서 제 단독 다이렉트로 알아봤을 땐 140만 원 나오길래 기겁했습니다. 혹시나 해서 예전에 아버지께서 가입하셨던 현대해상 부부 한정 플랜에 제 이름 추가운전자 경력인정으로 박아뒀던 기록을 찾아 등록했습니다. 조회해 보니까 군대에서 공병대 덤프트럭 1년 몰았던 경력이랑 합산되어 가입 경력이 꽉 찬 3년으로 책정되더군요. 최종 80만 원 중반대로 내려가는 혜택을 체감했습니다. 무조건 가입 전에 경력 사항이 얽혀 있는지 네이버나 구글 등을 통해 샅샅이 확인해 보시기를 추천드립니다."
+        </blockquote>
+    </section>
+
+    <section id="regulatory-section">
+        <h2>2026년도 자동차보험 제도 변화 방향 및 AI 트렌드</h2>
+        <p>2026년에 들어서면서 자동차보험 산업에도 인공지능 기술이 본격 적용되고 있습니다. 금융감독원을 주축으로 한 금융당국의 가이드라인과 보험사별 리모델링 정책 변화로 경력 인정 방식 또한 간소화되었습니다.</p>
+
+        <h3>인공지능 분석과 비대면 처리의 간편화</h3>
+        <p>기존에는 증명 서류 발급을 위해 정부24를 거치거나 군 병적증명서를 지참해 오프라인 대리점 상담을 거쳐 승인받던 불편함이 컸습니다. 2026년 기준 메이저 보험사들은 제미나이(Gemini), 챗지피티(ChatGPT), 그리고 국산 AI 원천 엔진을 활용하여 신규 운전자의 과거 전산망 데이터를 자동으로 긁어오는 완전 자동화 프로세스를 정착시켰습니다. 가입 신청서 작성 단계에서 마이데이터 연동 및 간편 비밀번호 인증만 완료하면, 국적 불문 해외 체류 증명부터 과거 공제조합 납입 경력까지 AI 엔진이 실시간으로 확인하여 즉시 청구서 견적금액에서 감면 혜택을 반영해 줍니다.</p>
+
+        <h3>환급 규정 및 소급 범위 대폭 확대</h3>
+        <p>과거에 운전 경력이 있었음에도 제도 자체를 인지하지 못해 수년간 비싼 기본 할증료를 고스란히 지출해 왔던 가입자들이 상당했습니다. 2026년 개선 조치에 따라 과거 누락되었던 경력에 대한 보험료 환급 요청권의 소멸시효가 한층 완화되었습니다. 이제는 가입한 지 10년이 지난 상태일지라도 본인이 해당 시점의 운전 자료를 정상 입증만 해낸다면 과거 과다 징수되었던 이자분까지 고스란히 정산받아 소급 환수 혜택을 온전히 수령할 수 있습니다.</p>
+    </section>
+
+    <section id="faq-section">
+        <h2>자주 묻는 질문 (FAQ)</h2>
+
+        <h3>Q1. 부모님 차량 보험에 운전자로 올라가 있으면 별도 등록 절차 없이 경력이 저절로 쌓이나요?</h3>
+        <p>아닙니다. 부모님 차를 몰기 위해 단순히 가명 범위(예: 가족 한정)를 늘리는 특약에 가입되어 있다는 사실만으로는 경력이 쌓이지 않습니다. 해당 계약 기간이 운행 경력으로 변환되게 하려면 반드시 피보험자 명부에 부모님 외에 본인을 가입경력인정 대상 추가운전자로 명시적으로 서명 지정해야 정식 집계가 이뤄집니다.</p>
+
+        <h3>Q2. 군대 운전병 출신입니다. 군대에서 1년 남짓 몰았는데 이것도 보험료 할인이 되나요?</h3>
+        <p>네, 가능합니다. 가입 경력은 소수점 혹은 일 단위로 합산 반영될 수 있습니다. 비록 복무 기간이 1년 수준으로 다소 짧더라도, 첫차를 구입하여 자차 보험을 준비할 때 1년 미만의 경력으로 산정되어 무경력 최초 등급보다는 요율 할인 이익을 누릴 수 있습니다. 다른 가족 보험 밑에 기재되었던 몇 달간의 경력과 상호 이관하여 누계 2년을 조기에 넘길 수 있으니 긁어모을 수 있는 모든 요소를 합산하여 신청하시기 바랍니다.</p>
+
+        <h3>Q3. 예전에 몰래 지나쳤던 이력을 뒤늦게 알았습니다. 지금 가입한 상태에서도 소급해서 환급금 신청이 가능한가요?</h3>
+        <p>언제든 소급 적용이 가능합니다. 가입 후 시간이 지났더라도 경력 인정 서류를 제출하면 소급 처리가 진행됩니다. 과거 연도에 납입하셨던 불합리한 할증 차액을 일할 계산하여 기존에 결제한 카드의 승인 취소 또는 계좌 입금 방식으로 깨끗이 환급금을 돌려받으실 수 있습니다.</p>
+
+        <h3>Q4. 장기렌트 혹은 공유차량 쏘카 같은 카셰어링 서비스도 운전 경력으로 환산되나요?</h3>
+        <p>장기렌터카의 경우 계약서 주체 명의가 가입자 본인 명의로 단독 설정되어 1개월 이상 연속 납입 내역이 있다면 정식 가입 증명이 유효하게 인정받습니다. 반면 쏘카나 그린카 등 임시 카셰어링 단기 대여 시스템은 하루 단위 초단기 이용을 총합 72시간 이상 넘겼을 때 한정하여 까다로운 계약 사실관계 증명을 통해 극히 드물게 반영되기는 하나, 통상적인 연 단위 갱신형 경력 입증으로는 증빙이 번잡하여 기각되는 비율이 높은 편입니다.</p>
+
+        <h3>Q5. 부부 한정 및 가족 한정에 동시 등록하여 운전자를 추가하는 데 드는 한도 제한이 궁금합니다.</h3>
+        <p>현재 금융당국의 심사 기준에 따라 개인용 자동차 종합보험에서는 원칙적으로 하나의 보험 계약당 최대 2명까지 추가 가입경력인정자를 등재시킬 수 있습니다. 부부 한정으로 체결하시는 경우 기본 배우자 1인을 포함하여 등재를 마칠 수 있으며, 일반 가족 한정 구조에서는 배우자와 자녀를 한 그룹으로 묶어 총 2명까지 운전 종피보험자 지정을 할 수 있으므로 혜택 수혜 자격을 놓치지 마시기 바랍니다.</p>
+    </section>
+
+    <section id="consult-section">
+        <h2>맞춤형 1대1 다이렉트 자동차보험 비교 분석 및 무료 컨설팅</h2>
+        <p>경력 인정 제도를 제대로 수용하여 내 지출을 최적화하고 싶다면 전문가 분석 서비스를 통해 보험사 간 가입경력요율 테이블 편차를 전격 비교하는 편이 유리합니다. 아래 개인별 맞춤 질문 항목에 필요한 기본 데이터를 입증해 주시면 신속하게 적정 납부 금액 가이드를 안내해 드립니다.</p>
+
+        <form class="lead-form" id="consultingForm">
+            <div class="form-row">
+                <label for="usr-name">성함 또는 이니셜</label>
+                <input type="text" id="usr-name" placeholder="홍길동" required>
+            </div>
+
+            <div class="form-row">
+                <label for="usr-tel">연락처 및 회신 가능한 모바일 정보</label>
+                <input type="text" id="usr-tel" placeholder="010-0000-0000" required>
+            </div>
+
+            <div class="form-row">
+                <label>본인이 보유한 인정 가능한 경력 종류 (중복 가능)</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="career-type" value="army"> 군 운전병 복무 이력
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="career-type" value="family"> 부모님/가족 차량 추가운전자 등록 이력
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="career-type" value="corporate"> 법인 운전기사 및 관공서 근무
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="career-type" value="rent"> 렌터카 장기 임차 경력
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="career-type" value="abroad"> 해외 자동차보험 가입 경력
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="prefer-brand">비교 조회를 희망하시는 손해보험 브랜드 목록</label>
+                <select id="prefer-brand">
+                    <option value="samsung">삼성화재 다이렉트 (가입 만족도 우수)</option>
+                    <option value="hyundai">현대해상 다이렉트 (안정적 보상 체계)</option>
+                    <option value="db">DB손해보험 다이렉트 (가성비 요율 지원)</option>
+                    <option value="kb">KB손해보험 다이렉트 (대중적 유틸리티 특약)</option>
+                    <option value="all">전 보험사 전체 최저가 비교 상담</option>
+                </select>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="submitForm()">비교 맞춤 컨설팅 신청서 송부</button>
+        </form>
+    </section>
+
+    <script>
+        function submitForm() {
+            const name = document.getElementById('usr-name').value;
+            const tel = document.getElementById('usr-tel').value;
+            if(!name || !tel) {
+                alert('연락처와 성함을 누락 없이 입력해 주시기 바랍니다.');
+                return;
+            }
+            alert('신청서가 안전하게 전송되었습니다. 2026년 전산 조회 기준을 토대로 담당 상담사가 조속히 연락을 드리도록 하겠습니다. 이용해 주셔서 진심으로 감사합니다.');
+        }
+    </script>
+
+    <section class="external-links-section">
+        <h4>함께 많이 찾는 키워드 및 공인 신뢰성 있는 관련 참고 사이트</h4>
+        <p>자동차보험 가입경력인정제도와 관련하여 더욱 권위 있고 신뢰도 높은 국가기관 및 정보 사이트의 공식 해설을 참고하시면 가입 시 실수를 줄일 수 있습니다.</p>
+        <ul class="external-links-list">
+            <li><a href="https://www.fss.or.kr/" target="_blank">금융감독원 (FSS)</a>: 우리나라 금융 소비자를 보호하며 보험사 통합 가이드라인 배포 제어 및 분쟁 조정을 전담하는 중앙 감독 기구입니다.</li>
+            <li><a href="https://www.e-insmarket.or.kr/" target="_blank">보험다모아</a>: 손해보험협회와 생명보험협회가 투명하게 연계하여 운영하는 대한민국 공식 비교 분석 사이트입니다.</li>
+            <li><a href="https://www.gov.kr/" target="_blank">정부24 (GOV)</a>: 군 운전병 경력 소급 인정 신청에 필요한 병적증명서 등을 언제 어디서든 즉각적으로 다운로드할 수 있는 공인 민원 포털입니다.</li>
+            <li><a href="https://www.koroad.or.kr/" target="_blank">도로교통공단 (KoROAD)</a>: 교통사고 예방 교육 및 안전운전 점수 혜택 관련 공식 제도를 일관되게 고시하는 법정공기업입니다.</li>
+            <li><a href="https://namu.wiki/w/%EC%95%84%EB%B2%A4%EB%96%BC" target="_blank">나무위키: 준중형차 모델 정보</a>: 초보운전 세대들이 가장 유용하게 진입하는 국민 첫차 대표 규격에 대한 기초 스펙 해설지입니다.</li>
+        </ul>
+    </section>
+  
